@@ -48,6 +48,9 @@ header nav a:hover{text-decoration:underline;text-decoration-thickness:3px;text-
 .btns{display:flex;flex-wrap:wrap;gap:16px;margin-top:34px}
 .photo{position:relative}
 .photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border:3px solid var(--ink);box-shadow:14px 14px 0 var(--ed);transform:rotate(1.5deg)}
+.more{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.more img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border:3px solid var(--ink)}
+.more img+img{box-shadow:8px 8px 0 var(--sun)}
 .photo::before{content:'';position:absolute;inset:-18px auto auto -18px;width:90px;height:90px;background:var(--sun);border:3px solid var(--ink);border-radius:50%;z-index:-1}
 
 .exp{background:var(--ink);color:#fff;padding:96px 0}
@@ -123,15 +126,15 @@ header nav a:hover{text-decoration:underline;text-decoration-thickness:3px;text-
 .foot svg{width:26px;height:26px}
 
 @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-.hero h1,.roles,.hero p,.btns,.photo{animation:rise .7s cubic-bezier(.2,.7,.3,1) both}
-.roles{animation-delay:.1s}.hero p{animation-delay:.18s}.btns{animation-delay:.26s}.photo{animation-delay:.15s}
+.hero h1,.roles,.hero p,.btns,.photos{animation:rise .7s cubic-bezier(.2,.7,.3,1) both}
+.roles{animation-delay:.1s}.hero p{animation-delay:.18s}.btns{animation-delay:.26s}.photos{animation-delay:.15s}
 .reveal{opacity:0;transform:translateY(32px);transition:opacity .7s,transform .7s cubic-bezier(.2,.7,.3,1)}
 .reveal.in{opacity:1;transform:none}
 .block.open .card{animation:rise .5s ease-out both;animation-delay:calc(var(--i,0)*60ms + 150ms)}
 
 @media(max-width:860px){
  header nav{display:none}.menu{display:block}
- .hero{padding:40px 0 64px}.hero .wrap{grid-template-columns:1fr;gap:44px}.photo{max-width:340px;order:-1}
+ .hero{padding:40px 0 64px}.hero .wrap{grid-template-columns:1fr;gap:44px}.photos{max-width:340px;order:-1}
  .exp,.work,.jobs-sec{padding-top:64px}.exp,.jobs-sec{padding-bottom:64px}
  .exp ol{grid-template-columns:1fr}.exp li,.exp li:nth-child(odd),.exp li:nth-child(even){padding:26px 0;border-right:0}
  .block-h button{padding:24px;gap:12px}.name{font-size:clamp(28px,9vw,64px);min-width:0}.count{display:none}.plus{margin-left:auto}.plus{width:42px;height:42px}.count{font-size:15px}
@@ -160,7 +163,7 @@ header nav a:hover{text-decoration:underline;text-decoration-thickness:3px;text-
     <p>With over <mark>five years of experience</mark> in technical communication, UX writing, and SEO content strategy, I translate complex software architectures into intuitive user experiences. Holding a B.Sc. in Computer Science and a PG Diploma in Journalism and Communication from Kerala Media Academy, I bridge the gap between software engineering teams and end users.</p><p>Beyond technical and product documentation, I write long-form cultural essays on <mark>Indian philosophy and wellness</mark> for Hidden Mantra, and manage two independent sports journalism publications, Lines Man Thoughts and Freehit Shots, under Hooman Inks.</p>
     <div class="btns"><a class="btn" href="mailto:sreekeshon@gmail.com">Email me</a><a class="btn wa" href="https://wa.me/917356676750" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
   </div>
-  <div class="photo"><img src="../photo.jpg" alt="Sreekesh Narayanan standing by a laterite wall with paddy fields and coconut palms behind him" width="472" height="582"></div>
+  <div class="photos"><div class="photo"><img src="../photo.jpg" alt="Sreekesh Narayanan standing by a laterite wall with paddy fields and coconut palms behind him" width="472" height="582"></div><div class="more"><img src="../photo-2.jpg" alt="Sreekesh Narayanan smiling in a Captain America T-shirt" width="480" height="600" loading="lazy"><img src="../photo-3.jpg" alt="Sreekesh Narayanan at his desk at Geodis, a landing page on his monitor" width="480" height="600" loading="lazy"></div></div>
 </div></section>
 
 <section class="exp" id="expertise"><div class="wrap">
